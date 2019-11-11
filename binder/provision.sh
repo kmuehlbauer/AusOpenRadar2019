@@ -13,6 +13,8 @@ cd data
 #rm cp2.tgz
 #cd ..
 
+wget http://www.mcs.anl.gov/~scollis/era5_data_aus.nc
+
 mkdir arm
 cd arm
 wget http://www.mcs.anl.gov/~scollis/pyart/csapr_test_case.nc
@@ -21,6 +23,12 @@ wget http://www.mcs.anl.gov/~scollis/pyart/sgpxsaprcmacsurI5.c1.20170801.044013.
 cd ..
 wget http://www.mcs.anl.gov/~scollis/metdata.tgz
 tar -xvzf metdata.tgz
+rm metdata.tgz
+
+wget http://www.mcs.anl.gov/~scollis/ausdata.tgz
+tar -xvzf ausdata.tgz
+rm ausdata.tgz
+
 cd ~
 if [ -d tmp ]; then
     rm -rf tmp
